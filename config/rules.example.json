@@ -1,0 +1,42 @@
+{
+  "_comment": "规则配置示例（由临床团队维护；此处数值仅为演示，非医学建议）",
+  "regimens": [
+    {
+      "name": "R-CHOP",
+      "cycles": 6,
+      "cycle_length_days": 21,
+      "inpatient_days": 4,
+      "nadir_days": [7, 12],
+      "assessment_after": [2, 4, 6],
+      "drugs": ["Rituximab", "Cyclophosphamide", "Doxorubicin",
+                "Vincristine", "Prednisone"]
+    },
+    {
+      "name": "R2-len",
+      "cycles": 6,
+      "cycle_length_days": 28,
+      "inpatient_days": 2,
+      "nadir_days": [10, 21],
+      "assessment_after": [3, 6],
+      "drugs": ["Rituximab", "Lenalidomide"]
+    }
+  ],
+  "alert_thresholds": {
+    "default": {
+      "anc_yellow": 1.0,
+      "anc_red": 0.5,
+      "plt_red": 30.0,
+      "fever_celsius": 38.0
+    },
+    "high_risk": {
+      "anc_yellow": 1.5,
+      "anc_red": 0.8,
+      "plt_red": 50.0,
+      "fever_celsius": 38.0
+    }
+  },
+  "booking": {
+    "disinfection_days": 1,
+    "_comment_booking": "患者之间同床消毒间隔天数"
+  }
+}

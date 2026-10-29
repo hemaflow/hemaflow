@@ -17,6 +17,8 @@
 
 `hemaflow/synthetic.py` 生成**完全合成**的演示数据（固定随机种子，无任何真实患者数据）。
 
+![HemaFlow 架构总览](docs/architecture.png)
+
 ### 快速开始
 
 ```bash
@@ -25,6 +27,8 @@ python3 demo.py        # 无第三方依赖，Python 3.10+
 ```
 
 运行后依次输出：某患者全疗程时间轴 → 一周床位甘特与反向锁床结果 → 间隔期血象分级预警。
+
+📖 更详细的接入指引（改科室口径的规则配置、HIS 对接建议、常见问题）见 **[docs/QUICKSTART.md](docs/QUICKSTART.md)**。
 
 ### 设计原则
 
@@ -60,12 +64,16 @@ AGPL-3.0（全文见 `LICENSE` 文件）。
 
 `hemaflow/synthetic.py` produces **fully synthetic** demo data (fixed seed, never any real patient data).
 
+![Architecture overview](docs/architecture.png)
+
 ### Quick start
 
 ```bash
 cd hemaflow
 python3 demo.py        # no third-party deps, Python 3.10+
 ```
+
+📖 For detailed integration guidance (customizing rule configs for your ward, HIS adapter suggestions, FAQ), see **[docs/QUICKSTART.md](docs/QUICKSTART.md)**.
 
 ### Design principles
 
